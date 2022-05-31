@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saúde UNASP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/heart-svgrepo-com.svg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="img/heart-svgrepo-com.svg" alt="Logo Saúde UNASP" width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link scrollSuave" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollSuave" href="#sessaoCalculoIMC">IMC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollSuave" href="#sessaoCadastro">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollSuave" href="#sessaoSobreNos">Sobre nós</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="mt-100px" id="home"></div>
+        <h1 class="display-3 text-center text-info">Saúde UNASP</h1>
+        <img src="img/banner.jpeg" class="img-fluid" alt="Banner Saúde UNASP">
+
+        <hr />
+
+        <section class="calculoIMC" id="sessaoCalculoIMC">
+            <h2 class="display-4 text-center text-info">Cálculo de IMC</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">IMC</th>
+                                <th scope="col">CLASSIFICAÇÃO</th>
+                                <th scope="col">OBESIDADE (GRAU)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MENOR QUE 18,5</td>
+                                <td>MAGREZA</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>ENTRE 18,5 E 24,9</td>
+                                <td>NORMAL</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>ENTRE 25,0 E 29,9</td>
+                                <td>SOBREPESO</td>
+                                <td>I</td>
+                            </tr>
+                            <tr>
+                                <td>ENTRE 30,0 E 39,9</td>
+                                <td>OBESIDADE</td>
+                                <td>II</td>
+                            </tr>
+                            <tr>
+                                <td>MAIOR QUE 40,0</td>
+                                <td>OBESIDADE GRAVE</td>
+                                <td>III</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-justify">
+                        IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde
+                        para calcular o peso ideal de cada pessoa.
+                        O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada
+                        ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e
+                        24,9.
+                    </p>
+                    <form id="formImc">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="pesoImc">Peso:</label>
+                                <input type="text" class="form-control" id="pesoImc" placeholder="80.0"
+                                    data-mask="000.00" data-mask-reverse="true">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="alturaImc">Altura:</label>
+                                <input type="text" class="form-control" id="alturaImc" placeholder="1.70"
+                                    data-mask="0.00" data-mask-reverse="true">
+                            </div>
+                            <div class="col-md-12">
+                                <input type="button" value="Calcular" class="btn btn-primary mt-2" id="btnCalcularIMC">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="cadastro" id="sessaoCadastro">
+            <h3 class="display-4 text-center text-info">Cadastro</h3>
+            <span class="texto-formulario">
+                Você quer ter uma <strong>vida saudável</strong>, com muito mais <strong>vigor</strong> e
+                <strong>longevidade</strong>?
+                Preencha o formulário abaixo e um de nossos especialistas entrará em contato com você.
+            </span>
+            <form id="formCadastro" class="mt-5">
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="cadastroNomeCompleto">Nome Completo:</label>
+                        <input type="text" class="form-control" id="cadastroNomeCompleto" placeholder="Nome Completo">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="cadastroDataNascimento">Data de Nascimento:</label>
+                        <input type="date" class="form-control" id="cadastroDataNascimento">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="row">
+                            <fieldset>
+                                <legend class="col-form-label col-sm-2 pt-0">Sexo:</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cadastroSexo"
+                                            id="cadastroFeminino" value="F" checked>
+                                        <label class="form-check-label" for="cadastroFeminino">
+                                            Feminino
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cadastroSexo"
+                                            id="cadastroMasculino" value="M">
+                                        <label class="form-check-label" for="cadastroMasculino">
+                                            Masculino
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="cadastroSexo"
+                                            id="cadastroOutro" value="O">
+                                        <label class="form-check-label" for="cadastroOutro">
+                                            Outro
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="cadastroCpf">CPF:</label>
+                        <input type="text" class="form-control" id="cadastroCpf" placeholder="000.000.000-00"
+                            data-mask="000.000.000-00" onblur="consultaCadastro()">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cadastroCep">CEP:</label>
+                        <input type="text" class="form-control" id="cadastroCep" placeholder="00000-000"
+                            data-mask="00000-000" onblur="popularEnderecoCadastro()">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cadastroLogradouro">Logradouro:</label>
+                        <input type="text" class="form-control" id="cadastroLogradouro" placeholder="Logradouro">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cadastroNumeroLogradouro">Número Logradouro:</label>
+                        <input type="text" class="form-control" id="cadastroNumeroLogradouro"
+                            placeholder="Número Logradouro">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="cadastroEmail">Endereço de email:</label>
+                        <input type="email" class="form-control" id="cadastroEmail" aria-describedby="emailHelp"
+                            placeholder="Seu email">
+                        <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
+                            ninguém.</small>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="mr-sm-2" for="cadastroUf">Estado:</label>
+                        <select class="custom-select mr-sm-2" id="cadastroUf">
+                            <option value="" selected>Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <label for="cadastroCidade">Cidade:</label>
+                        <input type="text" class="form-control" id="cadastroCidade" placeholder="Cidade">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="cadastroExpectativa">Qual sua expectativa?</label>
+                        <textarea class="form-control" id="cadastroExpectativa" rows="5"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="cadastroDeAcordo">
+                        <label class="form-check-label" for="cadastroDeAcordo">Estou de acordo com os termos</label>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <button id="btnSubmitCadastro" type="submit" class="btn btn-primary" disabled>Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <hr />
+        <section class="missao-visao-valores" id="sessaoSobreNos">
+            <h4 class="display-4 text-center text-info">Sobre nós</h4>
+            <span class="text-center introducao-missao-visao-valores my-5">
+                Nós do Saúde UNASP levamos muito a sério nosso serviço e atendimento ao cliente, veja abaixo nossa
+                Missão, Visão e Valores!
+            </span>
+            <div class="row">
+                <div class="missao col-md-4">
+                    <span class="display-4 text-info">Missão</span>
+                    <span class="texto">
+                        Construir um Brasil com muito mais saúde!
+                    </span>
+                </div>
+                <div class="visao  col-md-4">
+                    <span class="display-4 text-info">Visão</span>
+                    <span class="texto">
+                        Ser a referência brasileira em saúde e ainda tendo o melhor atendimento ao cliente!
+                    </span>
+                </div>
+                <div class="valores  col-md-4">
+                    <span class="display-4 text-info">Valores</span>
+                    <div class="texto">
+                        <ul>
+                            <li>Confiança</li>
+                            <li>Comprometimento</li>
+                            <li>Respeito</li>
+                            <li>Integridade</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1459.2515734266078!2d-46.78208003386618!3d-23.66644551405044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1648957274059!5m2!1spt-BR!2sbr"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-6">
+                    <p>O Saúde UNASP Está localizado na Estrada de Itapecerica, 5859 - Capão Redondo, São Paulo - SP,
+                        05890-020.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="modalResultadoIMC" tabindex="-1" role="dialog"
+            aria-labelledby="modalResultadoIMCTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cálculo de IMC</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="resultadoIMC"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalIMCSearch" tabindex="-1" role="dialog"
+            aria-labelledby="modalIMCSearchTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h5 >Esses dados já foram cadastrados, você deseja Deletar ou Atualizar?</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Atualizar</button>
+                        <button type="button" class="btn btn-primary" onclick="deletaCadastro()" data-dismiss = "modal">Deletar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer font-small bg-light">
+        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+            <a href="#">Saúde UNASP</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+        <div class="modal-body">
+            <p>Modal body text goes here.</p>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
